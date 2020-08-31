@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        
+        <table  >
+					
+            <td >
+                <fieldset >
+                    <legend>Registration</legend>
+                        <form action="registration.php" method="POST">
+                            <br/>
+                            <table >
+                            <tr>
+                            <td>Id</td>
+                                                
+                                <td><input name="id" type="text" ></td>
+                                                
+                                    </tr>
+                                            
+                                    <tr>
+                                        <td>Password</td>
+                                                
+                                            <td><input name="password" type="password"></td>
+                                                
+                                            </tr>
+
+                                            <tr>
+                                                <td>Confirm Password</td>
+                                                
+                                                <td><input name="confirmPassword" type="password"></td>
+                                                
+                                            </tr>
+
+                                            <tr>
+                                                <td>Name</td>
+                                                
+                                                <td><input name="name" type="text"></td>
+                                                
+                                            </tr>
+
+                                            
+                                            <tr>
+                                                <td>Email</td>
+                                                
+                                                <td>
+                                                    <input name="email" type="text">
+                                                    
+                                                </td>
+                                                
+                                            </tr>	
+                                    	
+        
+                                        <hr />
+                                        <input type="submit" name="register" value="Submit" onclick="ajax()" > 
+                                        
+                                        
+                        </form>
+                </fieldset>
+                                    </tr>	
+             </td>
+            
+                            
+        </table>
+
+<div id="data">
+	
+</div>
+
+<script type="text/javascript">
+		
+		function ajax(){
+
+var xhttp = new XMLHttpRequest();
+
+xhttp.open('POST', 'registration.php', true);
+xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+xhttp.send(null);
+
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+		document.getElementById('data').innerHTML =  this.responseText;
+				
+            }
+        }
+    }
+</script>
+
+    </body>
+</html>
