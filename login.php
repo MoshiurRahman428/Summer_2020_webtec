@@ -6,8 +6,6 @@
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,13 +13,13 @@
 </head>
 <body>
 
-	<form action="logcheck.php" method="post">
+	<form action="logincheck.php" method="post">
 		<fieldset>
 			<legend>Login</legend>
 			<table>
 				<tr>
-					<td>User Id</td>
-					<td><input type="text" name="id"></td>
+					<td>Username</td>
+					<td><input type="text" name="uname"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
@@ -29,7 +27,7 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td><input type="login" name="login" value="Login"></td>
+					<td><input type="submit" name="submit" value="Submit"></td>
 				</tr>
 			</table>
 		</fieldset>
